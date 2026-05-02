@@ -291,17 +291,19 @@ export const SiteSettingsProvider: React.FC<{ children: React.ReactNode }> = ({ 
   // Currency formatting function
   const formatCurrency = useCallback((amount: number): string => {
     try {
-      return new Intl.NumberFormat(activeSettings.currency_locale, {
+      // Use en-US locale for the number format to ensure English digits (1, 2, 3...) 
+      // but use the site-specific currency code (BDT, etc.)
+      return new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: activeSettings.currency_code,
         minimumFractionDigits: 0,
         maximumFractionDigits: 2,
-      }).format(amount);
+      }).format(amount).replace('BDT', activeSettings.currency_symbol);
     } catch {
       // Fallback if locale/currency is not supported
-      return `${activeSettings.currency_symbol}${amount.toFixed(2)}`;
+      return `${activeSettings.currency_symbol}${amount.toLocaleString('en-US')}`;
     }
-  }, [activeSettings.currency_locale, activeSettings.currency_code, activeSettings.currency_symbol]);
+  }, [activeSettings.currency_code, activeSettings.currency_symbol]);
 
   return (
     <SiteSettingsContext.Provider

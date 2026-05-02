@@ -20,7 +20,7 @@ export const countries: CountryData[] = [
   { code: 'AZ', name: 'Azerbaijan', currencyCode: 'AZN', currencySymbol: '₼', currencyLocale: 'az-AZ' },
   { code: 'BS', name: 'Bahamas', currencyCode: 'BSD', currencySymbol: '$', currencyLocale: 'en-BS' },
   { code: 'BH', name: 'Bahrain', currencyCode: 'BHD', currencySymbol: '.د.ب', currencyLocale: 'ar-BH' },
-  { code: 'BD', name: 'Bangladesh', currencyCode: 'BDT', currencySymbol: '৳', currencyLocale: 'bn-BD' },
+  { code: 'BD', name: 'Bangladesh', currencyCode: 'BDT', currencySymbol: '৳', currencyLocale: 'en-BD' },
   { code: 'BB', name: 'Barbados', currencyCode: 'BBD', currencySymbol: '$', currencyLocale: 'en-BB' },
   { code: 'BY', name: 'Belarus', currencyCode: 'BYN', currencySymbol: 'Br', currencyLocale: 'be-BY' },
   { code: 'BE', name: 'Belgium', currencyCode: 'EUR', currencySymbol: '€', currencyLocale: 'nl-BE' },

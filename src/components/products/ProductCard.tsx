@@ -100,7 +100,7 @@ export function ProductCard({ product }: ProductCardProps) {
     <div className="group bg-card rounded-md border border-border/60 flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-foreground/5 hover:border-border">
       <Link to={`/product/${product.slug}`} className="block flex-1">
         {/* Image */}
-        <div className="relative lg:aspect-[5/5] aspect-[4/5.5] overflow-hidden bg-secondary/50">
+        <div className="relative lg:aspect-[5/5] aspect-[4/5] overflow-hidden bg-secondary/50">
           <img
             src={product.images[0] || '/placeholder.svg'}
             alt={product.name}
