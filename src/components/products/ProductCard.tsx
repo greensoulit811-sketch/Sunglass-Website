@@ -100,7 +100,7 @@ export function ProductCard({ product }: ProductCardProps) {
     <div className="group bg-card rounded-md border border-border/60 flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-foreground/5 hover:border-border">
       <Link to={`/product/${product.slug}`} className="block flex-1">
         {/* Image */}
-        <div className="relative aspect-square overflow-hidden bg-white p-0">
+        <div className="relative aspect-square overflow-hidden bg-white">
           <img
             src={product.images[0] || '/placeholder.svg'}
             alt={product.name}
@@ -158,7 +158,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <Button
           variant="outline"
           size="sm"
-          className="w-full h-8 sm:h-10 text-xs sm:text-sm font-medium rounded-lg border-border hover:border-primary hover:bg-primary/5 transition-all gap-1.5 sm:gap-2"
+          className="w-full h-8 sm:h-10 text-xs sm:text-sm font-medium rounded-lg border-border hover:border-primary hover:bg-primary/5 hover:text-black transition-all gap-1.5 sm:gap-2"
           onClick={handleAddToCart}
           disabled={isAddingToCart || product.stock === 0}
           aria-label={product.has_variants ? 'অপশন দেখুন' : t('product.addToCart')}
