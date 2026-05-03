@@ -259,8 +259,8 @@ export default function LandingPageView() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">
            {products.map((p) => (
              <div key={p.id} className="group cursor-pointer space-y-6" onClick={() => { setSelectedProduct(p); scrollToCheckout(); }}>
-                <div className="aspect-[3/4] bg-[#fbfbfb] overflow-hidden relative border border-gray-50">
-                   <img src={p.images?.[0]} className="w-full h-full object-cover mix-blend-multiply transition-transform duration-700 group-hover:scale-110" alt={p.name} />
+                <div className="aspect-[3/4] bg-[#fbfbfb] overflow-hidden relative border border-gray-50 p-4">
+                   <img src={p.images?.[0]} className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110" alt={p.name} />
                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
                    {p.sale_price && (
                       <div className="absolute top-4 right-4 text-[9px] font-black uppercase tracking-widest bg-white px-2 py-1">Limited</div>

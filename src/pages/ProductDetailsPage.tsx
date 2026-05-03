@@ -231,7 +231,7 @@ export default function ProductDetailsPage() {
           <div className="space-y-4 lg:sticky lg:top-28 lg:self-start">
             {/* Main Image */}
             <div
-              className="aspect-square rounded-2xl overflow-hidden bg-secondary/40 group cursor-zoom-in relative border border-border/40"
+              className="aspect-square rounded-2xl overflow-hidden bg-white group cursor-zoom-in relative border border-border/40 p-6"
               onMouseMove={(e) => {
                 const rect = e.currentTarget.getBoundingClientRect();
                 const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -251,7 +251,7 @@ export default function ProductDetailsPage() {
               <img
                 src={product.images[selectedImage] || '/placeholder.svg'}
                 alt={product.name}
-                className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.8]"
+                className="w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-[1.8]"
               />
             </div>
             {/* Thumbnails */}
@@ -270,7 +270,7 @@ export default function ProductDetailsPage() {
                     <img
                       src={image}
                       alt={`${product.name} ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain p-1"
                     />
                   </button>
                 ))}

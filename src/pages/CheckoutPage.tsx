@@ -383,7 +383,7 @@ export default function CheckoutPage() {
                     const price = item.salePrice ?? item.price;
                     return (
                       <div key={item.id} className="flex gap-3">
-                        <img src={item.image} alt={item.name} className="w-14 h-14 rounded-lg object-cover bg-secondary" />
+                        <img src={item.image} alt={item.name} className="w-14 h-14 rounded-lg object-contain bg-white border border-border/40 p-1" />
                         <div className="flex-1 min-w-0">
                           <p className="text-sm font-medium line-clamp-1">{item.name}</p>
                           <p className="text-xs text-muted-foreground">{t('product.quantity')}: {item.quantity}</p>

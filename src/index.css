@@ -256,7 +256,7 @@
 
   /* Category card */
   .category-card {
-    @apply relative overflow-hidden rounded-xl aspect-square cursor-pointer;
+    @apply relative overflow-hidden rounded-xl aspect-square cursor-pointer bg-white;
   }
 
   .category-card::after {

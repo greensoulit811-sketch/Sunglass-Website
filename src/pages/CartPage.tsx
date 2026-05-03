@@ -46,12 +46,12 @@ export default function CartPage() {
                   {/* Image */}
                   <Link
                     to={`/product/${item.id}`}
-                    className="w-24 h-24 sm:w-32 sm:h-32 rounded-lg overflow-hidden bg-secondary shrink-0"
+                    className="w-24 h-24 sm:w-32 sm:h-32 rounded-lg overflow-hidden bg-white border border-border/40 p-2 shrink-0"
                   >
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </Link>
 

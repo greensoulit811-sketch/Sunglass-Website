@@ -25,12 +25,12 @@ export default function CategoriesPage() {
               <Link
                 key={category.id}
                 to={`/category/${category.slug}`}
-                className="group relative overflow-hidden rounded-2xl aspect-[4/3]"
+                className="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-white border border-border/40"
               >
                 <img
                   src={category.image}
                   alt={category.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 p-8"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
